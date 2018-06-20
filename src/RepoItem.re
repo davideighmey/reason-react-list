@@ -4,6 +4,7 @@ let component = ReasonReact.statelessComponent("RepoItem");
 let make = (~repo: RepoData.repo, _children) =>
   {
     ...component,
+    
     render: _self =>
       <div className="RepoItem">
         <a href=repo.html_url>

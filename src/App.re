@@ -1,3 +1,4 @@
+
 type state = {repoData: option(array(RepoData.repo))};
 
 type action =
@@ -9,6 +10,7 @@ let component = ReasonReact.reducerComponent("App");
 
 let make = (_children) => {
   ...component,
+
   initialState: (): state => {
     repoData: None
   },
@@ -25,6 +27,7 @@ let make = (_children) => {
 
     ReasonReact.NoUpdate;
   },
+
   reducer: (action, _state) => {
     switch action {
       | Loaded(loadedRepo) => ReasonReact.Update({
@@ -32,6 +35,7 @@ let make = (_children) => {
         })
     };
   },
+
   render: (self) => {
     let repoItem =
       switch (self.state.repoData) {
@@ -41,6 +45,7 @@ let make = (_children) => {
             repos
           )
         )
+
       | None => ReasonReact.stringToElement("Loading")
       };
 
