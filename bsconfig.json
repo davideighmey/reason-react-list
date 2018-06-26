@@ -1,15 +1,7 @@
 {
-  "name": "reason-scripts",
-  "sources": ["src"],
-  "bs-dependencies": [
-    "reason-react",
-    "@glennsl/bs-jest",
-    "bs-fetch",
-    "@glennsl/bs-json"
-  ],
-  "reason": {
-    "react-jsx": 2
-  },
-  "bsc-flags": ["-bs-super-errors"],
-  "refmt": 3
+  "name" : "reason-to-do",
+  "reason" : {"react-jsx" : 2},
+  "refmt": 3,
+  "bs-dependencies": ["reason-react"],
+  "sources": "src"
 }
